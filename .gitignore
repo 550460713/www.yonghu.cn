@@ -1,0 +1,15 @@
+.idea
+.vscode
+vendor
+*.log
+.env
+think
+readme.md
+license.txt
+composer.lock
+composer.json
+.travis.yml
+.example.env
+runtime
+route
+public
