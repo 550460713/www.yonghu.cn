@@ -91,4 +91,14 @@ abstract class BaseController
         return $v->failException(true)->check($data);
     }
 
+    /**
+     * @name: 当访问的方法不存在时，调用
+     * @msg: by韩茂
+     * @param {当前方法名}
+     * @param {URL所带参数}
+     * @return {返回json，状态码，信息，数据，http状态码}
+     */    
+    public function __call($name,$parameter){
+        return show(config('status.not_found_method'),'方法不存在',null,404);
+    }
 }
